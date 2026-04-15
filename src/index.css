@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Required for Lenis smooth scroll to work correctly */
+html {
+  scroll-behavior: auto !important;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground font-plex antialiased overflow-x-hidden;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-outfit;
+  }
+}
+
+/* Lenis smooth-scroll class applied to html element */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
